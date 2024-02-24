@@ -1,113 +1,94 @@
-.carousel {
+main .carousel-container {
+  padding: 0;
+}
+
+main .carousel {
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
-  transition: transform 0.3s ease;
+  overflow: scroll hidden;
   scroll-behavior: smooth;
-  overflow: hidden;
-  position: relative;
+  max-width: 1680px;
+  margin: auto;
 }
 
-.carousel > div {
-  flex: 0 0 100%;
-  scroll-snap-align: center;
+main .carousel picture {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
 }
 
-.carousel > div > div {
+main .carousel img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 90%;
+}
+  
+main .carousel > div {
+  width: 100%;
   flex-shrink: 0;
   scroll-snap-align: start;
   position: relative;
+  min-height: 580px;
   align-items: flex-end;
-  color: var(--color-white);
-  width: 100%;
-  max-width: 1000px;
+  display: flex;
 }
 
-.carousel > div:last-of-type {
-  margin-right: 0;
-}
-
-.picture-content picture {
-  flex-shrink: 0;
-  width: 350px;
-  height: 100%;
-  margin-right: 10px;
-}
-
-.carousel .picture-content picture img {
-  border: 1px solid black;
-}
-
-
-.carousel-wrapper:not(.carousel-single-slide) {
-  position: relative;
-  overflow: hidden;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.carousel-wrapper:not(.carousel-single-slide) .carousel {
-  padding-right: 10px;
-  margin-left: 10px;
-}
-
-.carousel-wrapper:not(.carousel-single-slide) .carousel > div {
-  padding: 0 10px;
-}
-
-.carousel > div > div > .picture-content {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  justify-content: center; /* Center the content horizontally */
-}
-
-.carousel > div > div > .picture-content img {
+main .carousel div.carousel-text {
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: white;
-  box-sizing: border-box;
-  width: 300px;
-  height: auto;
-  font-size: 15px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-flow: column;
-  margin-right: 0;
+  min-height: 188px;
+  padding: 0 28px;
 }
 
-.carousel .picture-content p {
-  margin: 0 1em;
-  width: 80%;
+main .carousel div.carousel-text p {
+  margin: 10px 0 16px;
+  line-height: 1.2;
 }
 
-.carousel-wrapper .arrow {
+main .carousel div.carousel-text h2 {
+  margin: 0;
+  margin-top: 16px; 
+}
+
+main .carousel div.carousel-text .button {
+  margin: 0;
+}
+  
+
+main .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+main .carousel-wrapper {
+  max-width: unset;
+}
+
+main .carousel-wrapper .carousel-buttons {
+  text-align: center;
+  margin-top: 0;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
   display: flex;
-  align-items: center;
+  right: 0;
+  left: 0;
   justify-content: center;
 }
 
-.carousel-wrapper .arrow svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--link-color);
+main .carousel-buttons button {
+  display: block;
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--highlight-background-color);
 }
 
-.carousel-wrapper .chevron-left {
-  left: 10px;
-}
-
-.carousel-wrapper .chevron-right {
-  right: 10px;
-}
-
-@media (min-width: 900px) {
-  .carousel-wrapper .arrow svg {
-    width: 50px;
-    height: 50px;
-  }
+main .carousel-buttons button.selected {
+  background-color: var(--link-color);
 }
