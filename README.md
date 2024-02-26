@@ -2,8 +2,13 @@
 Your project's description...
 
 ## Environments
+<<<<<<< HEAD
 - Preview: https://main--eds--kratoz6.hlx.page/
 - Live: https://main--eds--kratoz6.hlx.live/
+=======
+- Preview: https://main--asianpaints--kiranraj6.hlx.page/
+- Live: https://main--asianpaints--kiranraj6.hlx.live/
+>>>>>>> bde320e4bee97e9e58e9281b401d9e36b286b0ff
 
 ## Installation
 
