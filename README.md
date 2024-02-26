@@ -3,8 +3,8 @@ Your project's description...
 
 ## Environments
 <<<<<<< HEAD
-- Preview: https://main--eds--kratoz6.hlx.page/
-- Live: https://main--eds--kratoz6.hlx.live/
+- Preview: https://blogs--asianpaints--kiranraj6.hlx.page
+- Live: https://blogs--asianpaints--kiranraj6.hlx.live/
 =======
 - Preview: https://main--asianpaints--kiranraj6.hlx.page/
 - Live: https://main--asianpaints--kiranraj6.hlx.live/
